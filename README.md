@@ -1,2 +1,15 @@
-# recurring-commitment-smart-contract
-Pull-payment subscription system with role-based access control. Enables recurring payments where recipients claim on their schedule. Built with OpenZeppelin security patterns and comprehensive testing.
+# Recurring Commitment Smart Contract
+
+A Solidity-based subscription payment system implementing the pull-payment pattern for secure, recurring transactions.
+
+## Features
+- 🔄 **Pull-Payment Model** - Recipients control when to claim payments
+- 🛡️ **Security First** - ReentrancyGuard, AccessControl, SafeERC20
+- ⏰ **Time-Based Logic** - Automatic period calculations
+- 🚨 **Emergency Controls** - Pause/unpause functionality
+- 🎭 **Role Management** - Admin and Arbiter roles
+
+## Tech Stack
+- Solidity ^0.8.20
+- OpenZeppelin Contracts
+- Hardhat/Remix IDE
