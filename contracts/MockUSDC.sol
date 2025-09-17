@@ -2,6 +2,7 @@
 pragma solidity ^0.8.20;
 
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
+import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/utils/Pausable.sol";
 
@@ -247,20 +248,20 @@ contract MockUSDC is ERC20, Ownable, Pausable {
 
     /**
      * @notice Get contract information
-     * @return name Token name
-     * @return symbol Token symbol  
-     * @return decimals Token decimals
-     * @return totalSupply Total token supply
-     * @return owner Contract owner
-     * @return paused Pause state
+     * @return tokenName Token name
+     * @return tokenSymbol Token symbol  
+     * @return tokenDecimals Token decimals
+     * @return tokenTotalSupply Total token supply
+     * @return contractOwner Contract owner
+     * @return isPaused Pause state
      */
     function getInfo() external view returns (
-        string memory name,
-        string memory symbol,
-        uint8 decimals,
-        uint256 totalSupply,
-        address owner,
-        bool paused
+        string memory tokenName,
+        string memory tokenSymbol,
+        uint8 tokenDecimals,
+        uint256 tokenTotalSupply,
+        address contractOwner,
+        bool isPaused
     ) {
         return (
             name(),
